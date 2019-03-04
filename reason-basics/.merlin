@@ -1,6 +1,6 @@
 ####{BSB GENERATED: NO EDIT
 B lib/bs
-FLG -open MyNewProject
+FLG -open DevoxxBasicsReasonml
 FLG -ppx /usr/local/lib/node_modules/bs-platform/lib/bsppx.exe
 S /Users/Sushiii/Workspace/conference/reasonml/reason-basics/node_modules/bs-platform/lib/ocaml
 B /Users/Sushiii/Workspace/conference/reasonml/reason-basics/node_modules/bs-platform/lib/ocaml

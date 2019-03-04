@@ -1,4 +1,4 @@
-bs_package_flags = -bs-package-map my-new-project
+bs_package_flags = -bs-package-map devoxx-basics-reasonml
 src_root_dir = /Users/Sushiii/Workspace/conference/reasonml/reason-basics
 bsc = /usr/local/lib/node_modules/bs-platform/lib/bsc.exe
 bsdep = /usr/local/lib/node_modules/bs-platform/lib/bsb_helper.exe
@@ -7,7 +7,7 @@ bsc_flags = -bs-suffix -nostdlib -I '/Users/Sushiii/Workspace/conference/reasonm
 ppx_flags = 
 bs_package_includes = 
 bs_package_dev_includes = 
-namespace = -ns MyNewProject
+namespace = -ns DevoxxBasicsReasonml
 bsb_dir_group = 0
 refmt = /usr/local/lib/node_modules/bs-platform/lib/refmt.exe
 reason_react_jsx = 
@@ -25,11 +25,11 @@ rule build_cmj_cmi
   command = ${bsc} ${bs_package_flags} -bs-assume-no-mli -bs-no-builtin-ppx-ml -bs-no-implicit-include ${bs_package_includes} ${bsc_lib_includes} ${bsc_extra_includes} ${warnings} ${bsc_flags} -o ${out} -c  ${in} $postbuild
   depfile = ${in}.d
   description = [34mBuilding[39m [2m${out}[22m
-build src/Demo-MyNewProject.cmj |  $src_root_dir/src/Demo.bs.js src/Demo-MyNewProject.cmi : build_cmj_cmi src/Demo.mlast
+build src/Demo-DevoxxBasicsReasonml.cmj |  $src_root_dir/src/Demo.bs.js src/Demo-DevoxxBasicsReasonml.cmi : build_cmj_cmi src/Demo.mlast
   bsc_flags = $bsc_flags -bs-re-out -bs-super-errors
   bs_package_flags = $bs_package_flags  -bs-package-output commonjs:src
 rule build_package
   command = ${bsc} -w -49 -no-alias-deps -c ${in}
   description = [34mBuilding[39m [2m${out}[22m
-build MyNewProject.cmi : build_package MyNewProject.mlmap
-build build.ninja : phony  ||  MyNewProject.cmi src/Demo.mlast.d
+build DevoxxBasicsReasonml.cmi : build_package DevoxxBasicsReasonml.mlmap
+build build.ninja : phony  ||  DevoxxBasicsReasonml.cmi src/Demo.mlast.d

@@ -1,0 +1,18 @@
+# ninja log v5
+1	44	1551660271	MyNewProject.cmi	a679e7b077392e76
+0	78	1551660271	src/Demo.mlast	d59b3d79f9e58f63
+78	97	1551660271	src/Demo.mlast.d	58229987667b69c0
+0	22	1551660271	src/Demo-MyNewProject.cmj	5475a21ade0f31a3
+0	22	1551660271	/Users/Sushiii/Workspace/conference/reasonml/reason-basics/src/Demo.bs.js	5475a21ade0f31a3
+0	22	1551660271	src/Demo-MyNewProject.cmi	5475a21ade0f31a3
+0	32	1551660494	MyNewProject.cmi	a679e7b077392e76
+0	79	1551660829	src/Demo.mlast	d59b3d79f9e58f63
+81	102	1551660829	src/Demo.mlast.d	58229987667b69c0
+0	58	1551660829	src/Demo-MyNewProject.cmj	5475a21ade0f31a3
+0	58	1551660829	/Users/Sushiii/Workspace/conference/reasonml/reason-basics/src/Demo.bs.js	5475a21ade0f31a3
+0	58	1551660829	src/Demo-MyNewProject.cmi	5475a21ade0f31a3
+0	32	1551660833	src/Demo.mlast	d59b3d79f9e58f63
+32	40	1551660833	src/Demo.mlast.d	58229987667b69c0
+1	30	1551660833	src/Demo-MyNewProject.cmj	5475a21ade0f31a3
+1	30	1551660833	/Users/Sushiii/Workspace/conference/reasonml/reason-basics/src/Demo.bs.js	5475a21ade0f31a3
+1	30	1551660833	src/Demo-MyNewProject.cmi	5475a21ade0f31a3

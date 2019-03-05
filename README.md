@@ -2,8 +2,30 @@
 
 ### Basics of ReasonML
 
-TODO agenda
+- Let binding
+- Block definition and variables scope
+- Module
+- Type ans aliases
+- Basic types + List + spread operator ?
+- Option
+- Variant
+- Pattern matching
+- Records
 
 ### ReactReason
 
-TODO agenda
+- Stateless component
+
+  - JSX
+  - self
+  - props
+  - lifecycle
+  - style
+
+- Statefull component
+
+  - action
+  - state
+  - reducer
+
+- Using ReactJs components into a Reason React project

@@ -38,9 +38,13 @@ setup.data
 setup.log
 
 # Merlin configuring file for Vim and Emacs
-.merlin
+
 
 reason-react/node_modules
 reason-react/lib
+reason-react/node_modules
+reason-react/.merlin
+
 reason-basics/node_modules
 reason-basics/lib
+reason-basics/.merlin

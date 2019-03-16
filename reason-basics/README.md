@@ -1,22 +1,15 @@
-# Basic Reason Template
+# Basic Reason
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
-
-# Build
+## Run project
 
 ```
+# Build only
 npm run build
-```
 
-# Build + Watch
-
-```
+# Build + watch
 npm run start
-```
 
-And in another terminal
-
-```
+# In another terminal
 node src/Demo.bs.js
 ```
 

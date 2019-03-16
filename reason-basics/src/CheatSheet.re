@@ -1,4 +1,6 @@
-/* Variables declaration */
+/*
+ Variables declaration
+ */
 let units = 10;
 let addUnits = (currentCount, gainedUnits) => currentCount + gainedUnits;
 let name = "Amelie";
@@ -15,10 +17,10 @@ let amelie = {name: "Amelie", units: 1000};
 
 /* Alias */
 let name = string;
-let 
 
-
-/* Block Variable */
+/*
+ Block Variable
+ */
 let block = {
   let a = 1.0;
   let b = 2.5;
@@ -29,7 +31,9 @@ let block = {
 /* Js.log2("Cannot access", a); */
 /* Js.log2("Block result", block); */
 
-/* Option */
+/*
+ Option
+ */
 /* let avatarUrl = Some("Some URL"); */
 let avatarUrl = None;
 
@@ -39,7 +43,9 @@ let getAvatar =
   | None => "Default avatar URL"
   };
 
-/* Variant + pattern matching */
+/*
+ Variant + pattern matching
+ */
 type rarities =
   | Common
   | Legendary

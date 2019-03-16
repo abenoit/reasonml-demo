@@ -5,7 +5,7 @@
 - Let binding
 - Block definition and variables scope
 - Module
-- Type ans aliases
+- Type and aliases
 - Basic types + List + spread operator ?
 - Option
 - Variant

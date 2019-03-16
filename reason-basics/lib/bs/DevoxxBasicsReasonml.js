@@ -4,5 +4,8 @@
 
 var Demo = 0;
 
+var CheatSheet = 0;
+
 exports.Demo = Demo;
+exports.CheatSheet = CheatSheet;
 /* No side effect */

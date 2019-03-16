@@ -1,9 +1,0 @@
-# ninja log v5
-5	38	1552768071	DevoxxBasicsReasonml.cmi	e7d7cef4eba8921b
-1	48	1552768071	src/Demo.mlast	d59b3d79f9e58f63
-3	50	1552768071	src/CheatSheet.mlast	d1009984993d3e5
-48	60	1552768071	src/Demo.mlast.d	a36026c4e12ff848
-50	61	1552768071	src/CheatSheet.mlast.d	346c51a3e30f425b
-1	25	1552768071	src/Demo-DevoxxBasicsReasonml.cmj	f173e1e321e7d56e
-1	25	1552768071	/Users/Sushiii/Workspace/conference/reasonml/reason-basics/src/Demo.bs.js	f173e1e321e7d56e
-1	25	1552768071	src/Demo-DevoxxBasicsReasonml.cmi	f173e1e321e7d56e

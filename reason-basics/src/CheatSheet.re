@@ -16,7 +16,8 @@ type player = {
 let amelie = {name: "Amelie", units: 1000};
 
 /* Alias */
-let name = string;
+type nickname = string;
+let playerName: nickname = "Sushiii";
 
 /*
  Block Variable

@@ -1,1 +1,1 @@
-ReactDOMRe.renderToElementWithId(<Main title="Hello Devoxx !" />, "main");
+ReactDOMRe.renderToElementWithId(<App title="Hello Devoxx !" />, "main");

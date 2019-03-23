@@ -651,7 +651,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-css@4.2.x:
+clean-css@4.2.x, clean-css@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.1.tgz#2d411ef76b8569b6d0c84068dabe85b0aa5e5c17"
   integrity sha512-4ZxI6dy4lrY6FHzfiy1aEOXgu4LIsW2MhwG0VBKdcoGoH/XLFgaHSdLTGr4O8Be6A8r3MOphEiI8Gc1n0ecf3g==
@@ -3635,6 +3635,14 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+
+style-ext-html-webpack-plugin@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/style-ext-html-webpack-plugin/-/style-ext-html-webpack-plugin-4.0.1.tgz#a87aedb5aeef52d1fd0952d2e372df860ecb3dfd"
+  integrity sha512-/W9LfDNrD2WmY49EupbAXjyemHBBwiFgg74TU2LqjalPu8W+mQSuJ4hKRcixV+easxeUodlotEiOS5goTM3tLQ==
+  dependencies:
+    clean-css "^4.2.1"
+    debug "^4.1.0"
 
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"

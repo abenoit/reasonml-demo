@@ -36,10 +36,9 @@ cd reason-react
 
 npm install
 
-npm start
+npm bsb
 
-# in another tab
-npm run server
+npm run webpack
 ```
 
 ### Presentation plan

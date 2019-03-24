@@ -14,27 +14,29 @@ module Styles = {
   open Css;
 
   let avatar =
-  style([
+    style([
       height(pt(100)),
       width(pt(100)),
       border(px(1), `solid, red),
-      boxShadow(~blur=pt(5),  lightgrey)
+      boxShadow(~blur=pt(5), lightgrey),
     ]);
 
-    let container =  style([
+  let container =
+    style([
       display(`flex),
-      height(pt(200)),
+      height(pt(100)),
       width(pt(500)),
       padding(pt(Spacing.large)),
       borderRadius(pt(10)),
       boxShadow(~blur=pt(20), lightgrey),
     ]);
 
-  let playerInfo = style([
-  fontSize(em(1.5)),
-  paddingLeft(pt(Spacing.medium)),
-  hover([cursor(`pointer)])]);
-
+  let playerInfo =
+    style([
+      fontSize(em(1.5)),
+      paddingLeft(pt(Spacing.medium)),
+      hover([cursor(`pointer)]),
+    ]);
 };
 
 let make = (~playerName: string, _children) => {
@@ -43,16 +45,28 @@ let make = (~playerName: string, _children) => {
   reducer: (action, state) =>
     switch (action) {
     | StartEdit => ReasonReact.Update({...state, isEditState: true})
-    | UpdateName(newName) => ReasonReact.Update({...state, playerName: newName})
+    | UpdateName(newName) =>
+      ReasonReact.Update({...state, playerName: newName})
     | EndEdit => ReasonReact.Update({...state, isEditState: false})
     },
   render: self =>
     <div className=Styles.container>
-      <div className=Styles.avatar/>
+      <div className=Styles.avatar />
       {
         self.state.isEditState ?
-          <div> <input value=self.state.playerName onChange={evt => self.send(UpdateName(evt -> ReactEvent.Form.target##value))}/> </div> :
-          <div className=Styles.playerInfo onClick={_ => self.send(StartEdit)}>
+          <div>
+            <ClickOutside onClickOutside={_ => self.send(EndEdit)}>
+              <input
+                value={self.state.playerName}
+                onChange={
+                  evt =>
+                    self.send(UpdateName(evt->ReactEvent.Form.target##value))
+                }
+              />
+            </ClickOutside>
+          </div> :
+          <div
+            className=Styles.playerInfo onClick={_ => self.send(StartEdit)}>
             {ReasonReact.string(self.state.playerName)}
           </div>
       }

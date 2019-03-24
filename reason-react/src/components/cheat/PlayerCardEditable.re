@@ -10,7 +10,7 @@ type action =
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
-let make = (~playerName: string, _children) => {
+let make = (~playerName, ~avatar, ~level, _children) => {
   ...component,
   initialState: () => {isEditState: false, playerName},
   reducer: (action, state) =>
@@ -35,9 +35,13 @@ let make = (~playerName: string, _children) => {
               }
             />
           </ClickOutside> :
-          <div
-            className=Styles.playerInfo onClick={_ => self.send(StartEdit)}>
-            {ReasonReact.string(self.state.playerName)}
+          <div className=Styles.player>
+            <span className=Styles.info onClick={_ => self.send(StartEdit)}>
+              {ReasonReact.string(playerName)}
+            </span>
+            <span className=Styles.level>
+              {level |> string_of_int |> ReasonReact.string}
+            </span>
           </div>
       }
     </div>,

@@ -8,7 +8,11 @@ let make = (~players: array(Players.player), _children) => {
         players
         |> Array.map((player: Players.player) =>
              <div className=Styles.card key={player.name}>
-               <PlayerCardEditable playerName={player.name} />
+               <PlayerCard
+                 playerName={player.name}
+                 avatar={player.avatar}
+                 level={player.level}
+               />
              </div>
            )
         |> ReasonReact.array

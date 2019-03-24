@@ -1,5 +1,12 @@
 open Css;
 
+module Colors = {
+  let primary = `hex("ff322d");
+  let deepblue = `hex("027381");
+};
+
+global("body", [fontFamily("Roboto")]);
+
 let title = style([textAlign(`center)]);
 
 let avatar =
@@ -25,11 +32,26 @@ let container =
     boxShadow(~blur=pt(20), lightgrey),
   ]);
 
-let playerInfo =
+let player =
   style([
-    fontSize(em(1.5)),
+    display(`flex),
     marginLeft(pt(Spacing.medium)),
+    flexDirection(`column),
+  ]);
+
+let info =
+  style([
+    color(Colors.deepblue),
+    fontSize(em(1.5)),
     hover([cursor(`pointer)]),
+  ]);
+
+let level =
+  style([
+    textAlign(`left),
+    color(Colors.primary),
+    fontSize(em(0.85)),
+    marginTop(pt(Spacing.small)),
   ]);
 
 let editPlayerInfo =

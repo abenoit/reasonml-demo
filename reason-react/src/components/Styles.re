@@ -1,13 +1,21 @@
 open Css;
 
 module Colors = {
-  let primary = `hex("ff322d");
+  let primary = `hex("fe6050");
   let deepblue = `hex("027381");
+  let darkgrey = `hex("333");
 };
 
-global("body", [fontFamily("Roboto")]);
+global("body", [margin(px(0)), fontFamily("Roboto")]);
 
-let title = style([textAlign(`center)]);
+let title =
+  style([
+    textAlign(`center),
+    backgroundColor(Colors.darkgrey),
+    color(Colors.primary),
+    padding(px(Spacing.medium)),
+    margin(px(0)),
+  ]);
 
 let avatar =
   style([

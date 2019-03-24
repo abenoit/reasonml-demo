@@ -2,11 +2,14 @@
 external clickOutside: ReasonReact.reactClass = "default";
 
 [@bs.deriving abstract]
-type jsProps = {onClickOutside: ReactEvent.Mouse.t => unit};
+type jsProps = {
+  className: option(string),
+  onClickOutside: ReactEvent.Mouse.t => unit,
+};
 
-let make = (~onClickOutside, children) =>
+let make = (~className=?, ~onClickOutside, children) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=clickOutside,
-    ~props=jsProps(~onClickOutside),
+    ~props=jsProps(~className, ~onClickOutside),
     children,
   );

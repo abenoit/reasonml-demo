@@ -10,35 +10,6 @@ type action =
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
-module Styles = {
-  open Css;
-
-  let avatar =
-    style([
-      height(pt(100)),
-      width(pt(100)),
-      border(px(1), `solid, red),
-      boxShadow(~blur=pt(5), lightgrey),
-    ]);
-
-  let container =
-    style([
-      display(`flex),
-      height(pt(100)),
-      width(pt(500)),
-      padding(pt(Spacing.large)),
-      borderRadius(pt(10)),
-      boxShadow(~blur=pt(20), lightgrey),
-    ]);
-
-  let playerInfo =
-    style([
-      fontSize(em(1.5)),
-      paddingLeft(pt(Spacing.medium)),
-      hover([cursor(`pointer)]),
-    ]);
-};
-
 let make = (~playerName: string, _children) => {
   ...component,
   initialState: () => {isEditState: false, playerName},
@@ -54,17 +25,16 @@ let make = (~playerName: string, _children) => {
       <div className=Styles.avatar />
       {
         self.state.isEditState ?
-          <div>
-            <ClickOutside onClickOutside={_ => self.send(EndEdit)}>
-              <input
-                value={self.state.playerName}
-                onChange={
-                  evt =>
-                    self.send(UpdateName(evt->ReactEvent.Form.target##value))
-                }
-              />
-            </ClickOutside>
-          </div> :
+          <ClickOutside onClickOutside={_ => self.send(EndEdit)}>
+            <input
+              className=Styles.editPlayerInfo
+              value={self.state.playerName}
+              onChange={
+                evt =>
+                  self.send(UpdateName(evt->ReactEvent.Form.target##value))
+              }
+            />
+          </ClickOutside> :
           <div
             className=Styles.playerInfo onClick={_ => self.send(StartEdit)}>
             {ReasonReact.string(self.state.playerName)}

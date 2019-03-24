@@ -1,15 +1,9 @@
 let component = ReasonReact.statelessComponent(__MODULE__);
 
-module Styles = {
-  open Css;
-
-  let card = style([paddingBottom(pt(Spacing.medium))]);
-};
-
 let make = (~players: array(Players.player), _children) => {
   ...component,
   render: _self =>
-    <div>
+    <div className=Styles.cardList>
       {
         players
         |> Array.map((player: Players.player) =>

@@ -1,3 +1,3 @@
-let small = "8pt";
-let medium = "12pt";
-let large = "16pt";
+let small = 8;
+let medium = 12;
+let large = 16;

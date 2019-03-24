@@ -7,15 +7,17 @@
     "bsb": "bsb -clean-world -make-world -w"
   },
   "keywords": [
+    "ReasonML",
+    "ReasonReact",
     "BuckleScript"
   ],
-  "author": "",
+  "author": "Amélie Benoit",
   "license": "MIT",
   "dependencies": {
+    "bs-css": "^8.0.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "reason-react": ">=0.4.0",
-    "style-ext-html-webpack-plugin": "^4.0.1"
+    "reason-react": ">=0.4.0"
   },
   "devDependencies": {
     "bs-platform": "^4.0.7",

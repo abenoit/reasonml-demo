@@ -1,31 +1,36 @@
 let component = ReasonReact.statelessComponent(__MODULE__);
 
 module Styles = {
-  open ReactDOMRe.Style;
+  open Css;
 
   let avatar =
-    make(~height="100px", ~width="100px", ~border="1px solid lightgrey", ());
+    style([
+      height(pt(100)),
+      width(pt(100)),
+      border(px(1), `solid, red),
+      boxShadow(~blur=pt(5), lightgrey),
+    ]);
 
   let container =
-    make(
-      ~display="flex",
-      ~height="200px",
-      ~width="500px",
-      ~padding=Spacing.large,
-      ~borderRadius="10pt",
-      ~boxShadow=" 0px 0 20px lightgrey",
-      ~fontFamily="Roboto",
-      (),
-    );
-
-  let playerInfo = make(~paddingLeft=Spacing.medium, ());
+    style([
+      display(`flex),
+      height(pt(200)),
+      width(pt(500)),
+      padding(pt(Spacing.large)),
+      borderRadius(pt(10)),
+      boxShadow(~blur=pt(20), lightgrey),
+    ]);
+  let playerInfo =
+    style([fontSize(em(1.5)), paddingLeft(pt(Spacing.medium))]);
 };
 
 let make = (~playerName: string, _children) => {
   ...component,
   render: _self =>
-    <div style=Styles.container>
-      <div style=Styles.avatar />
-      <div style=Styles.playerInfo> {ReasonReact.string(playerName)} </div>
+    <div className=Styles.container>
+      <div className=Styles.avatar />
+      <div className=Styles.playerInfo>
+        {ReasonReact.string(playerName)}
+      </div>
     </div>,
 };

@@ -8,7 +8,8 @@ module.exports = {
   watch: true,
   devServer: {
     port: 8000,
-    hot: true
+    hot: true,
+    contentBase: "./"
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

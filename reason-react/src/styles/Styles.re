@@ -15,6 +15,7 @@ let title =
     color(Colors.primary),
     padding(px(Spacing.medium)),
     margin(px(0)),
+    marginBottom(pt(Spacing.medium)),
   ]);
 
 let avatar =

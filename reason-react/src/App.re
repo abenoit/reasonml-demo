@@ -5,6 +5,5 @@ let make = (~title, _children) => {
   render: _self =>
     <div>
       <h1 className=Styles.title> {ReasonReact.string(title)} </h1>
-      <PlayerCards players=Players.players />
     </div>,
 };

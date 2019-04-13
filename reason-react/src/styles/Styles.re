@@ -34,7 +34,7 @@ let avatar =
   style([
     borderRadius(pt(2)),
     height(pt(80)),
-    width(pt(80)),
+    minWidth(pt(80)),
     border(px(1), `solid, Colors.ligthgrey1),
     boxShadow(~blur=pt(5), lightgrey),
     backgroundColor(Colors.ligthgrey1),
@@ -76,5 +76,4 @@ let level =
     marginTop(pt(Spacing.small)),
   ]);
 
-let editPlayerInfo =
-  style([fontSize(em(1.4)), marginLeft(pt(Spacing.medium))]);
+let editPlayerInfo = style([fontSize(em(1.4)), width(pt(100))]);

@@ -12,10 +12,12 @@ global("body", [margin(px(0)), fontFamily("Roboto")]);
 let app =
   style([
     height(vh(100.)),
+    width(vw(100.)),
     display(`grid),
     gridTemplateRows([pt(50), `repeat((`autoFill, pt(110)))]),
     gridTemplateColumns([`repeat((`num(3), pt(250)))]),
     gridGap(pt(Spacing.medium)),
+    justifyContent(`center),
     backgroundColor(Colors.ligthgrey1),
   ]);
 

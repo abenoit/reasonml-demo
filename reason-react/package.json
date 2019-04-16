@@ -4,7 +4,8 @@
   "main": "src/Index.bs.js",
   "scripts": {
     "webpack": "webpack-dev-server",
-    "bsb": "bsb -clean-world -make-world -w"
+    "bsb": "bsb -clean-world -make-world -w",
+    "test": "jest"
   },
   "keywords": [
     "ReasonML",
@@ -14,6 +15,7 @@
   "author": "Amélie Benoit",
   "license": "MIT",
   "dependencies": {
+    "@glennsl/bs-jest": "^0.4.8",
     "bs-css": "^8.0.3",
     "react": "16.8.6",
     "react-click-outside": "github:tj/react-click-outside",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "bs-platform": "5.0.1",
+    "bs-react-test-renderer": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.0.1",
     "webpack-cli": "^3.1.1",

@@ -15,11 +15,6 @@
   ],
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": [
-    "reason-react",
-    "bs-css",
-    "@glennsl/bs-jest",
-    "bs-react-test-renderer"
-  ],
+  "bs-dependencies": ["reason-react", "bs-css"],
   "refmt": 3
 }

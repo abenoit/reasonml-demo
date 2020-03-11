@@ -1,31 +1,4 @@
-# Demo of Devoxx France 2019
-
-## Basics of ReasonML
-
-### Run project
-
-```sh
-cd reason-basics
-
-npm run build # Build
-
-npm run start # Build + Watch
-
-# in another terminal
-node src/Demo.bs.js
-```
-
-### Presentation plan
-
-- Let binding
-- Block definition and variables scope
-- Module
-- Type and aliases
-- Basic types + List + spread operator ?
-- Option
-- Variant
-- Pattern matching
-- Records
+# Demo Project
 
 ## ReactReason
 

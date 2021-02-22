@@ -7,20 +7,20 @@ module Colors = {
   let ligthgrey1 = `hex("eff3f5");
 };
 
-global("body", [margin(px(0)), fontFamily("Roboto")]);
+global("body", [margin(px(0)), fontFamily(`var("Roboto"))]);
+
 
 let app =
   style([
     height(vh(100.)),
     width(vw(100.)),
     display(`grid),
-    gridTemplateRows([pt(50), `repeat((`autoFill, pt(110)))]),
+    gridTemplateRows([pt(50), `repeat( `autoFill,  pt(110))]),
     gridTemplateColumns([`repeat((`num(3), pt(250)))]),
     gridGap(pt(Spacing.medium)),
     justifyContent(`center),
     backgroundColor(Colors.ligthgrey1),
   ]);
-
 let title =
   style([
     gridColumn(1, 4),
@@ -31,21 +31,17 @@ let title =
     padding(px(Spacing.medium)),
     margin(px(0)),
   ]);
-
 let avatar =
   style([
     borderRadius(pt(2)),
     height(pt(80)),
     minWidth(pt(80)),
     border(px(1), `solid, Colors.ligthgrey1),
-    boxShadow(~blur=pt(5), lightgrey),
+    boxShadow(Shadow.box(~blur=pt(5), lightgrey)),
     backgroundColor(Colors.ligthgrey1),
   ]);
-
 let card = style([padding(pt(Spacing.medium))]);
-
 let cardList = style([display(`flex), flexWrap(`wrap)]);
-
 let container =
   style([
     display(`flex),
@@ -55,21 +51,18 @@ let container =
     backgroundColor(white),
     /* boxShadow(~blur=pt(20), lightgrey), */
   ]);
-
 let player =
   style([
     display(`flex),
     marginLeft(pt(Spacing.medium)),
     flexDirection(`column),
   ]);
-
 let info =
   style([
     color(Colors.deepblue),
     fontSize(em(1.5)),
     hover([cursor(`pointer)]),
   ]);
-
 let level =
   style([
     textAlign(`left),
@@ -77,5 +70,4 @@ let level =
     fontSize(em(0.85)),
     marginTop(pt(Spacing.small)),
   ]);
-
 let editPlayerInfo = style([fontSize(em(1.4)), width(pt(100))]);

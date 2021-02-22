@@ -1,10 +1,12 @@
 {
-  "name": "devoxx-reasonml",
+  "name": "reasonml-demo",
   "version": "0.1.0",
   "main": "src/Index.bs.js",
+  "description": "Simple demo project to introduce ReasonML used in a ReactJS application",
   "scripts": {
     "webpack": "webpack-dev-server",
     "bsb": "bsb -clean-world -make-world -w",
+    "clean": "bsb -clean-world",
     "test": "jest"
   },
   "keywords": [
@@ -15,14 +17,16 @@
   "author": "Amélie Benoit",
   "license": "MIT",
   "dependencies": {
-    "bs-css": "^8.0.3",
-    "react": "16.8.6",
+    "bs-css": "^13.4.0",
+    "bs-css-emotion": "^2.4.0",
+    "react": "16.8.1",
     "react-click-outside": "github:tj/react-click-outside",
-    "react-dom": "16.8.6",
-    "reason-react": "0.7.0"
+    "react-dom": "16.8.1",
+    "reason-react": "0.9.1",
+    "reason-test-framework": "0.3.2"
   },
   "devDependencies": {
-    "bs-platform": "5.0.1",
+    "bs-platform": "7.3.1",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.0.1",
     "webpack-cli": "^3.1.1",

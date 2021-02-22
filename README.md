@@ -11,10 +11,10 @@ cd reason-react
 
 npm install
 
-# in a console
-npm bsb
+# Run Bucklescript compiler
+npm run bsb
 
-# in another console
+# Run webpack
 npm run webpack
 ```
 

@@ -12,7 +12,7 @@ cd reason-react
 npm install
 
 # Run Bucklescript compiler
-npm bsb
+npm run bsb
 
 # Run webpack
 npm run webpack

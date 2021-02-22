@@ -1,5 +1,5 @@
 {
-  "name": "devoxx-reasonml",
+  "name": "reasonml-demo",
   "reason": {
     "react-jsx": 3
   },
@@ -9,12 +9,12 @@
   },
   "package-specs": [
     {
-      "module": "commonjs",
+      "module": "es6",
       "in-source": true
     }
   ],
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": ["reason-react",  "reason-test-framework", "bs-css"],
+  "bs-dependencies": [ "reason-react", "bs-css", "bs-css-emotion"],
   "refmt": 3
 }
